@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Shell xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:TabIssueRedrect"
+             x:Class="TabIssueRedrect.MainPage"
+              xmlns:pagese="clr-namespace:TabIssueRedrect.Components.Pages"
+
+             BackgroundColor="{DynamicResource PageBackgroundColor}">
+
+
+    <TabBar>
+
+
+        <ShellContent Title="Health List" Icon="icons_task.png">
+            <ContentPage Title="Health">
+                <BlazorWebView x:Name="Survey2" HostPage="wwwroot/index.html">
+                    <BlazorWebView.RootComponents>
+                        <RootComponent x:Name="root" Selector="#app" ComponentType="{x:Type pagese:Home}" />
+                    </BlazorWebView.RootComponents>
+                </BlazorWebView>
+            </ContentPage>
+        </ShellContent>
+
+        <ShellContent Title="Add Provider" Icon="account.png">
+            <ContentPage Title="Add Provider">
+                <BlazorWebView x:Name="Survey1" HostPage="wwwroot/index.html">
+                    <BlazorWebView.RootComponents>
+                        <RootComponent x:Name="Survey21" Selector="#app" ComponentType="{x:Type pagese:Counter}" />
+                    </BlazorWebView.RootComponents>
+                </BlazorWebView>
+            </ContentPage>
+        </ShellContent>
+    </TabBar>
+</Shell>
