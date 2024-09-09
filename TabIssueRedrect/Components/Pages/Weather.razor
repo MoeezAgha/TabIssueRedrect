@@ -2,7 +2,7 @@
 
 <h1>Weather</h1>
 
-<p>This component demonstrates showing data.</p>
+<p>This component demonstrates showing data. </p>
 
 @if (forecasts == null)
 {
@@ -35,6 +35,10 @@ else
 
 @code {
     private WeatherForecast[]? forecasts;
+
+    [Parameter]
+    public string? FromWhichPage { get; set; } // This parameter will come from the MAUI page
+
 
     protected override async Task OnInitializedAsync()
     {

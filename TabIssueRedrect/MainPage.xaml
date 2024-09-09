@@ -1,26 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Shell xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:TabIssueRedrect"
-             x:Class="TabIssueRedrect.MainPage"
-              xmlns:pagese="clr-namespace:TabIssueRedrect.Components.Pages"
-        xmlns:pages1e="clr-namespace:TabIssueRedrect.Components"
-             BackgroundColor="{DynamicResource PageBackgroundColor}">
+       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+       xmlns:local="clr-namespace:TabIssueRedrect"
+       x:Class="TabIssueRedrect.MainPage"
+       xmlns:pagese="clr-namespace:TabIssueRedrect.Components.Pages"
+       xmlns:pages1e="clr-namespace:TabIssueRedrect.Components"
+       BackgroundColor="{DynamicResource PageBackgroundColor}">
 
-    
-    
-    
     <TabBar>
-
-            <ContentPage Title="Home" IsVisible="Hidden">
-                <BlazorWebView x:Name="blazorWebView2" HostPage="wwwroot/index.html">
-                    <BlazorWebView.RootComponents>
-                    <RootComponent Selector="#app" ComponentType="{x:Type pages1e:Routes}" />
-                    </BlazorWebView.RootComponents>
-                </BlazorWebView>
-            </ContentPage>
-       
-
+        <!-- Health List Tab -->
         <ShellContent Title="Health List" Icon="icons_task.png">
             <ContentPage Title="Health">
                 <BlazorWebView x:Name="Survey2" HostPage="wwwroot/index.html">
@@ -31,6 +19,7 @@
             </ContentPage>
         </ShellContent>
 
+        <!-- Add Provider Tab -->
         <ShellContent Title="Add Provider" Icon="account.png">
             <ContentPage Title="Add Provider">
                 <BlazorWebView x:Name="Survey1" HostPage="wwwroot/index.html">
@@ -40,5 +29,8 @@
                 </BlazorWebView>
             </ContentPage>
         </ShellContent>
+
+
     </TabBar>
+
 </Shell>

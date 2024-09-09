@@ -10,8 +10,12 @@
 @code {
     private int currentCount = 0;
 
-    private void IncrementCount()
+    private async Task IncrementCount()
     {
-        navigationManager.NavigateTo("/weather");
+        // await Shell.Current.GoToAsync("//weather");
+
+        //   await Shell.Current.GoToAsync($"//weather?FromWhichPage=CounterPage");
+        App.Current.MainPage.Navigation.PushAsync(new NewPage2("name" ));
+
     }
 }

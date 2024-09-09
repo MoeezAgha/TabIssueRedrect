@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TabIssueRedrect.Components.Pages.NewPage2"
+                    xmlns:pagese="clr-namespace:TabIssueRedrect.Components.Pages"
+
+             Title="NewPage2">
+    
+    <BlazorWebView x:Name="WeatherView" HostPage="wwwroot/index.html">
+        <BlazorWebView.RootComponents>
+            <RootComponent x:Name="weatherRoot" Selector="#app" ComponentType="{x:Type pagese:Weather}" />
+        </BlazorWebView.RootComponents>
+    </BlazorWebView>
+</ContentPage>
